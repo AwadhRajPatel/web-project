@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Developer Project:T&A</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <h1>T&A Data Submission Form</h1>
+    <section class="date">
+        <div class="left">
+            <form id="dataForm">
+                <label for="startDate">START DATE:</label>
+                <input type="date" id="startDate" value="<?= date('Y-m-d'); ?>" required />
+            </form>
+        </div>
+        <div class="right">
+            <form id="dataForm">
+                <label for="startDate">END DATE:</label>
+                <input type="date" id="startDate" value="<?= date('Y-m-d'); ?>" required />
+            </form>
+        </div>
+    </section>
+
+    <!-- Part two -->
+    <section class="Production">
+            <form id="">
+                <div>
+                    <label for="startDate">Production Per Day Per Machine</label>
+                </div>
+                <div class="quantity-container">
+                    <input type="number" id="quantity" class="quantity-input">
+                </div>
+            </form>
+    </section>
+    <!-- third part -->
+    <section class="Production">
+        <form id="">
+            <div>
+                <label for="startDate">Total Order Quantity</label>
+            </div>
+            <div class="quantity-container">
+                <input type="number" id="quantity" class="quantity-input">
+            </div>
+        </form>
+</section>
+<!-- four part -->
+<h2>Fabric Section</h2>
+
+ <!-- <section class="Fabric"> -->
+    <form id="">
+        <div class="fabric-section">
+    
+            <div class="row">
+    
+                <label for="fabric-name">Fabric Name</label>
+                <div class="dropdown">Searchable Dropdown</div>
+            </div>
+    
+            <div class="row">
+                <div class="input-group">
+                    <div style="width: 60%;">
+                        <label for="per-piece">Per Piece Requirement</label>
+                        <input type="number" id="per-piece" value="0.5">
+                    </div>
+                    <div>
+                        <label>Choose Unit</label>
+                        <div class="radio-group">
+                            <input type="radio" name="unit" id="unit-m" checked> M
+                            <input type="radio" name="unit" id="unit-kg"> Kg
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <label>Processes (Dropdown)</label>
+                <div class="process-tags">
+                    <div class="tag">DYING <button>&times;</button></div>
+                    <div class="tag">MOCK UP <button>&times;</button></div>
+                    <div class="dropdown">Add More...</div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <label>Color And Quantity:</label>
+                <div class="input-group">
+                    <input type="text" placeholder="Color">
+                    <input type="number" placeholder="Quantity">
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Color">
+                    <input type="number" placeholder="Quantity">
+                </div>
+                <button class="button">ADD MORE COLORS AND QUANTITY</button>
+            </div>
+    
+            <div class="row">
+                <label>Stages To Be Skipped (Dropdown)</label>
+                <div class="stages-tags">
+                    <div class="tag">FOB <button>&times;</button></div>
+                    <div class="tag">TOP <button>&times;</button></div>
+                    <div class="dropdown">Add More...</div>
+                </div>
+            </div>
+        </div>
+  </form>
+  <!--  -->
+  <button class="button green-button">ADD MORE FABRICS( IF clicked then Everything in the fabric section should be repeated)</button>
+
+  <div class="form-container">
+
+    <div class="row">
+        <label>Is China Fabric Present?</label>
+        <div>
+            <input type="radio" name="china-fabric" id="yes" value="yes"> Yes
+            <input type="radio" name="china-fabric" id="no" value="no" checked> No
+        </div>
+    </div>
+
+    <div class="row" id="china-fabric-section" style="display: none;">
+        <label>Select China Fabric</label>
+        <div class="china-fabric-tags">
+            <div class="tag">CHINA LACE <button>&times;</button></div>
+            <div class="tag">BAG VIOL <button>&times;</button></div>
+            <div class="dropdown">Add More...</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <label>Choose Major Fabric</label>
+        <div class="dropdown">Dropdown</div>
+    </div>
+
+    <div class="row">
+        <label>TRIMS:</label>
+        <div class="dropdown">Dropdown</div>
+        <button class="button">Add More Trims</button>
+    </div>
+
+    <div class="row">
+        <label>Accessories:</label>
+        <div class="dropdown">Dropdown</div>
+        <button class="button">Add More Accessories</button>
+    </div>
+
+    <button class="button">SUBMIT</button>
+</div>
+  <!--  -->
+ <!-- </section> -->
+ 
+
+</body>
+
+</html>
